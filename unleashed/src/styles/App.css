@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+img {
+  max-width: 25%;
+  height: auto
+}
+
+header {
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 3em;
+}
+
+header nav a {
+  margin: 0 1em;
+  font-size: 20px;
+  color: whitesmoke;
+}
