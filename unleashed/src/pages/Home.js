@@ -1,10 +1,11 @@
 import axios from 'axios'
 import CountryRend from '../components/CountryRend'
+import Logo from '../components/Logo'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 //home page build
-const Home = () => {
+const Home = (props) => {
   const [countries, setCountries] = useState([])
   const navigate = useNavigate()
 
@@ -24,6 +25,9 @@ const Home = () => {
 
   return (
     <div>
+      <div>
+        <Logo siteLogo={props.siteLogo} />
+      </div>
       <section>
         {countries.map((countries) => (
           <div>

@@ -1,8 +1,9 @@
 import axios from 'axios'
+import Logo from '../components/Logo'
 import AirLayout from '../components/AirLayout'
 import { useState, useEffect } from 'react'
 
-const Airline = () => {
+const Airline = (props) => {
   const [airlines, setAirlines] = useState([])
 
   //retrieve and set Airlines
@@ -17,6 +18,9 @@ const Airline = () => {
 
   return (
     <div>
+      <div>
+        <Logo siteLogo={props.siteLogo} />
+      </div>
       <section>
         {airlines.map((airlines) => (
           <div>

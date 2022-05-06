@@ -1,8 +1,9 @@
 import axios from 'axios'
+import Logo from '../components/Logo'
 import CountryLayout from '../components/CountryLayout'
 import { useState, useEffect } from 'react'
 
-const Country = () => {
+const Country = (props) => {
   const [countries, setCountries] = useState([])
 
   //retrieve and set Countries
@@ -17,6 +18,9 @@ const Country = () => {
 
   return (
     <div>
+      <div>
+        <Logo siteLogo={props.siteLogo} />
+      </div>
       <section>
         {countries.map((countries) => (
           <div>
