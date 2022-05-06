@@ -6,10 +6,9 @@ const Nav = () => {
     <header>
       <nav className="navbar">
         <div>
-          <Link to="/">Home</Link>
+          <Link to="/">Land</Link>
           <Link to="/airlines">Air</Link>
-          <Link to="/countries">Land</Link>
-          <Link to="/cities">City Fun</Link>
+          <Link to="/cities">Trots</Link>
         </div>
       </nav>
     </header>
