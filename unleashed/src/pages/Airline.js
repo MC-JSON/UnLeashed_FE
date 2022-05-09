@@ -16,6 +16,7 @@ const Airline = (props) => {
     getAirlines()
   }, [])
 
+  //airline breakdown between logo and countries
   return (
     <div>
       <div>

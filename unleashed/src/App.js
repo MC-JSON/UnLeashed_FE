@@ -20,6 +20,10 @@ const App = () => {
             path="/country/:id"
             element={<Country siteLogo={siteLogo} />}
           />
+          <Route
+            path="/airline/:id"
+            element={<Airline siteLogo={siteLogo} />}
+          />
           <Route path="*" element={<Home siteLogo={siteLogo} />} />
         </Routes>
       </main>
