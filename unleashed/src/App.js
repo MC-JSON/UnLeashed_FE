@@ -4,7 +4,7 @@ import Nav from './components/Nav'
 import Home from './pages/Home'
 import { siteLogo } from './Images'
 import Airline from './pages/Airline'
-// import City from './pages/City'
+import City from './pages/City'
 import Country from './pages/Country'
 
 const App = () => {
@@ -15,7 +15,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home siteLogo={siteLogo} />} />
           <Route path="/airline" element={<Airline siteLogo={siteLogo} />} />
-          {/* <Route path="/city" element={<City siteLogo={siteLogo} />} /> */}
+          <Route path="/city" element={<City siteLogo={siteLogo} />} />
           <Route
             path="/country/:id"
             element={<Country siteLogo={siteLogo} />}
