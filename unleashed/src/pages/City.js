@@ -1,7 +1,6 @@
 ///recommendation form that emails to admin
 
-//admin
-//admin forms for editing reviews
+//admin link access
 
 //mapbox?
 
@@ -53,5 +52,4 @@ const City = (props) => {
     </div>
   )
 }
-
 export default City
