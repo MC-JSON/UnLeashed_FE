@@ -12,8 +12,11 @@ const UpdatePost = (props) => {
     date: props.date,
     description: props.description,
     stay: props.stay,
+    stayLink: props.stayLink,
     treat: props.treat,
+    treatLink: props.treatLink,
     walk: props.walk,
+    walkLink: props.walkLink
   })
 
   const handleChange = (event) => {
@@ -38,7 +41,7 @@ const UpdatePost = (props) => {
     navigate('/city')
   }
 
-  const { id, name, image, date, description, stay, treat, walk } = formValue
+  const { id, name, image, date, description, stay, stayLink, treat, treatLink, walk, walkLink } = formValue
 
   return (
     <div className="forms-wrapper">
@@ -89,6 +92,13 @@ const UpdatePost = (props) => {
             />
             <input
               type="text"
+              name="stayLink"
+              placeholder="Stay Link"
+              value={stayLink}
+              onChange={handleChange}
+            />
+            <input
+              type="text"
               name="treat"
               placeholder="Treat"
               value={treat}
@@ -96,9 +106,23 @@ const UpdatePost = (props) => {
             />
             <input
               type="text"
+              name="treatLink"
+              placeholder="Treat Link"
+              value={treatLink}
+              onChange={handleChange}
+            />
+            <input
+              type="text"
               name="Walk"
               placeholder="Walk"
               value={walk}
+              onChange={handleChange}
+            />
+            <input
+              type="text"
+              name="walkLink"
+              placeholder="Walk Link"
+              value={walkLink}
               onChange={handleChange}
             />
             <button

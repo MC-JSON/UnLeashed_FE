@@ -10,8 +10,11 @@ const CreatePost = (props) => {
     date: '',
     description: '',
     stay: '',
+    stayLink: '',
     treat: '',
+    treatLink: '',
     walk: '',
+    walkLink: ''
   })
 
   const handleChange = (event) => {
@@ -31,7 +34,7 @@ const CreatePost = (props) => {
   }
 
 
-  const { name, image, date, description, stay, treat, walk } = formValue
+  const { name, image, date, description, stay, stayLink, treat, treatLink, walk, walkLink } = formValue
 
   return (
     <div className="forms-wrapper">
@@ -70,22 +73,43 @@ const CreatePost = (props) => {
             <input
               type="text"
               name="stay"
-              placeholder="Stay"
+              placeholder="Stay Name"
               value={stay}
               onChange={handleChange}
             />
             <input
               type="text"
+              name="stayLink"
+              placeholder="Stay Link"
+              value={stayLink}
+              onChange={handleChange}
+            />
+            <input
+              type="text"
               name="treat"
-              placeholder="Treat"
+              placeholder="Treat Name"
               value={treat}
               onChange={handleChange}
             />
             <input
               type="text"
+              name="treatLink"
+              placeholder="Treat Link"
+              value={treatLink}
+              onChange={handleChange}
+            />
+            <input
+              type="text"
               name="walk"
-              placeholder="Walk"
+              placeholder="Walk Name"
               value={walk}
+              onChange={handleChange}
+            />
+            <input
+              type="text"
+              name="walkLink"
+              placeholder="Walk Link"
+              value={walkLink}
               onChange={handleChange}
             />
             <button

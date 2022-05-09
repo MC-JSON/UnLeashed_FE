@@ -34,7 +34,7 @@ const City = (props) => {
         favorite dog friendly places to Stay, get a Treat, or take a Walk in
         each city.
       </div>
-      <section className="post-map">
+      <section className="map post-map">
         {posts.map((posts) => (
           <div>
             <PostLayout
@@ -43,8 +43,11 @@ const City = (props) => {
               date={posts.date}
               description={posts.description}
               stay={posts.stay}
+              stayLink={posts.stayLink}
               treat={posts.treat}
+              treatLink={posts.treatLink}
               walk={posts.walk}
+              walkLink={posts.walkLink}
             />
           </div>
         ))}

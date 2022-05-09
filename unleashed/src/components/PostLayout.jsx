@@ -8,11 +8,20 @@ const PostLayout = (props) => {
         <h2>{props.name}</h2>
         <h3>{props.date}</h3>
         <p>{props.description}</p>
-        <a href={props.stay}>STAY {props.stay}</a>
+        <div>
+          STAY: 
+        <a href={props.stayLink}>{props.stay}</a>
+        </div>
         <br />
-        <a href={props.treat}>TREAT {props.treat}</a>
+        <div>
+          TREAT: 
+        <a href={props.treatLink}>{props.treat}</a>
+        </div>
         <br />
-        <a href={props.walk}>WALK {props.walk}</a>
+        <div>
+          WALK:
+        <a href={props.walkLink}>{props.walk}</a>
+      </div>
       </div>
     </div>
   )

@@ -3,10 +3,8 @@ import { Route, Routes } from 'react-router-dom'
 import Nav from './components/Nav'
 import Home from './pages/Home'
 import { siteLogo } from './Images'
-// import Airline from './pages/Airline'
 import City from './pages/City'
 import Admin from './pages/Admin'
-// import Country from './pages/Country'
 
 const App = () => {
   return (
@@ -15,17 +13,8 @@ const App = () => {
       <main>
         <Routes>
           <Route path="/" element={<Home siteLogo={siteLogo} />} />
-          {/* <Route path="/airline" element={<Airline siteLogo={siteLogo} />} /> */}
           <Route path="/city" element={<City siteLogo={siteLogo} />} />
           <Route path="/ruroutetru" element={<Admin siteLogo={siteLogo} />} />
-          {/* <Route
-            path="/country/:id"
-            element={<Country siteLogo={siteLogo} />}
-          />
-          <Route
-            path="/airline/:id"
-            element={<Airline siteLogo={siteLogo} />}
-          /> */}
           <Route path="*" element={<Home siteLogo={siteLogo} />} />
         </Routes>
       </main>
