@@ -35,6 +35,19 @@ const Home = (props) => {
       <div>
         <Logo siteLogo={props.siteLogo} />
       </div>
+      <div className="intro">
+        Welcome to UnLeashed, a central hub for dog international travel
+        information. You will see below listings for both country and airline
+        canine requirements. A short introduction of requirements is provided,
+        please utilize the links for a more intensive breakdown of requirements
+        from the country/airline websites.
+      </div>
+      <div className="post-link">
+        If you find city recommendations of interest. Please follow Ruthie for
+        her travel recommendations. Please see the link here or at the
+        navigation bar.
+        <a href="http://localhost:3000/city">Ruthie Recommends</a>
+      </div>
       <div>
         <section>
           {countries.map((countries) => (

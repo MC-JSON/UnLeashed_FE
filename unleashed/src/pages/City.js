@@ -27,6 +27,13 @@ const City = (props) => {
     <div>
       <div>
         <Logo siteLogo={props.siteLogo} />
+        <h1>Ruthie Recommends</h1>
+      </div>
+      <div className="intro">
+        Ruthie recommends her favorite dog friendly spots in every city she has
+        visited across the globe! Below you will find links to some of her
+        favorite dog friendly places to Stay, get a Treat, or take a Walk in
+        each city.
       </div>
       <section>
         {posts.map((posts) => (
