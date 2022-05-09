@@ -33,6 +33,7 @@ const City = (props) => {
           <div>
             <PostLayout
               name={posts.name}
+              image={posts.image}
               date={posts.date}
               description={posts.description}
               stay={posts.stay}

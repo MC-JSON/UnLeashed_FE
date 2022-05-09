@@ -1,15 +1,13 @@
 import axios from 'axios'
-import CountryRend from '../components/CountryRend'
-import AirRend from '../components/AirRend'
+import CountryLayout from '../components/CountryLayout'
+import AirLayout from '../components/AirLayout'
 import Logo from '../components/Logo'
 import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
 
 //home page build
 const Home = (props) => {
   const [countries, setCountries] = useState([])
   const [airlines, setAirlines] = useState([])
-  const navigate = useNavigate()
 
   //retrieve and set Countries
   const getCountries = async () => {
@@ -30,14 +28,6 @@ const Home = (props) => {
     getAirlines()
   }, [])
 
-  const navCountry = (countries) => {
-    navigate(`/country/${countries}`)
-  }
-
-  const navAirline = (airlines) => {
-    navigate(`/airline/${airlines}`)
-  }
-
   //intro breakdown between logo and countries
   //country/airline search function?
   return (
@@ -45,28 +35,34 @@ const Home = (props) => {
       <div>
         <Logo siteLogo={props.siteLogo} />
       </div>
-      <section>
-        {countries.map((countries) => (
-          <div>
-            <CountryRend
-              onclick={() => navCountry(countries.name)}
-              name={`${countries.name}`}
-              flag_img={countries.flag_img}
-            />
-          </div>
-        ))}
-      </section>
-      <section>
-        {airlines.map((airlines) => (
-          <div>
-            <AirRend
-              onclick={() => navAirline(airlines.name)}
-              name={`${airlines.name}`}
-              logo={airlines.logo}
-            />
-          </div>
-        ))}
-      </section>
+      <div>
+        <section>
+          {countries.map((countries) => (
+            <div>
+              <CountryLayout
+                name={countries.name}
+                flag_img={countries.flag_img}
+                requirements={countries.requirements}
+                url={countries.url}
+              />
+            </div>
+          ))}
+        </section>
+      </div>
+      <div>
+        <section>
+          {airlines.map((airlines) => (
+            <div>
+              <AirLayout
+                name={airlines.name}
+                logo={airlines.logo}
+                reservations={airlines.reservations}
+                url={airlines.url}
+              />
+            </div>
+          ))}
+        </section>
+      </div>
     </div>
   )
 }

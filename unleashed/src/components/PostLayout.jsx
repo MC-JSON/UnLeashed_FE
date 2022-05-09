@@ -2,7 +2,7 @@ const PostLayout = (props) => {
   return (
     <div className="card">
       <div className="img-wrapper">
-        <img src={props.stay} alt="Stay" />
+        <img src={props.image} alt="City" />
       </div>
       <div className="info-wrapper">
         <h2>{props.name}</h2>
