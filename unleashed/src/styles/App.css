@@ -49,7 +49,7 @@ header nav a {
   display: flex
 }
 
-.card{
+.card, h2{
   display: flex;
   flex-flow: column;
   text-align: center;
