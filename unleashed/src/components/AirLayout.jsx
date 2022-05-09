@@ -9,6 +9,7 @@ const AirLayout = (props) => {
         <p>{props.reservations}</p>
         <a href={props.url}>{props.url}</a>
       </div>
+      <br />
     </div>
   )
 }

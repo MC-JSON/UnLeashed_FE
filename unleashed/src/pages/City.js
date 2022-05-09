@@ -34,7 +34,7 @@ const City = (props) => {
         favorite dog friendly places to Stay, get a Treat, or take a Walk in
         each city.
       </div>
-      <section>
+      <section className="post-map">
         {posts.map((posts) => (
           <div>
             <PostLayout

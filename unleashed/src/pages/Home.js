@@ -42,39 +42,43 @@ const Home = (props) => {
         please utilize the links for a more intensive breakdown of requirements
         from the country/airline websites.
       </div>
+      <br />
       <div className="post-link">
         If you find city recommendations of interest. Please follow Ruthie for
-        her travel recommendations. Please see the link here or at the
+        her travel recommendations. Please use the link below or at the
         navigation bar.
         <a href="http://localhost:3000/city">Ruthie Recommends</a>
       </div>
-      <div>
-        <section>
-          {countries.map((countries) => (
-            <div>
-              <CountryLayout
-                name={countries.name}
-                flag_img={countries.flag_img}
-                requirements={countries.requirements}
-                url={countries.url}
-              />
-            </div>
-          ))}
-        </section>
-      </div>
-      <div>
-        <section>
-          {airlines.map((airlines) => (
-            <div>
-              <AirLayout
-                name={airlines.name}
-                logo={airlines.logo}
-                reservations={airlines.reservations}
-                url={airlines.url}
-              />
-            </div>
-          ))}
-        </section>
+      <br />
+      <div class="column-container">
+        <div className="map countries-map">
+          <section>
+            {countries.map((countries) => (
+              <div>
+                <CountryLayout
+                  name={countries.name}
+                  flag_img={countries.flag_img}
+                  requirements={countries.requirements}
+                  url={countries.url}
+                />
+              </div>
+            ))}
+          </section>
+        </div>
+        <div className="map airlines-map">
+          <section>
+            {airlines.map((airlines) => (
+              <div>
+                <AirLayout
+                  name={airlines.name}
+                  logo={airlines.logo}
+                  reservations={airlines.reservations}
+                  url={airlines.url}
+                />
+              </div>
+            ))}
+          </section>
+        </div>
       </div>
     </div>
   )

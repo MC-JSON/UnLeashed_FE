@@ -1,6 +1,5 @@
 import axios from 'axios'
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 
 //form for creating new posts into database
 const CreatePost = (props) => {
@@ -22,8 +21,6 @@ const CreatePost = (props) => {
     })
   }
 
-  let navigate = useNavigate()
-
   // handles update submit and navigates back
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -31,7 +28,6 @@ const CreatePost = (props) => {
       'http://localhost:3001/create/city',
       formValue
     )
-    navigate('/city')
   }
 
 
@@ -42,7 +38,7 @@ const CreatePost = (props) => {
       <h1>Create Post</h1>
       <div className="forms">
         <section className="input-section">
-          <form className="create-post-form" onSubmit={handleSubmit}>
+          <form className="create-post-form">
             <input
               type="text"
               name="name"
@@ -94,7 +90,7 @@ const CreatePost = (props) => {
             />
             <button
               className="create-post-button"
-              type="submit"
+              onClick={handleSubmit}
             >
               Create Post
             </button>

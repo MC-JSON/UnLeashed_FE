@@ -9,6 +9,7 @@ const CountryLayout = (props) => {
         <p>{props.requirements}</p>
         <a href={props.url}>{props.url}</a>
       </div>
+      <br />
     </div>
   )
 }
