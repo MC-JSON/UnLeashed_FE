@@ -6,9 +6,8 @@ const Nav = () => {
     <header>
       <nav className="navbar">
         <div>
-          <Link to="/">Land</Link>
-          <Link to="/airlines">Air</Link>
-          <Link to="/cities">Trots</Link>
+          <Link to="/">Home</Link>
+          <Link to="/city">Posts</Link>
         </div>
       </nav>
     </header>
