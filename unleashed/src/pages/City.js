@@ -8,6 +8,7 @@ import axios from 'axios'
 import PostLayout from '../components/PostLayout'
 import Logo from '../components/Logo'
 import { useState, useEffect } from 'react'
+import Contact from '../components/Contact'
 
 const City = (props) => {
   const [posts, setPosts] = useState([])
@@ -29,10 +30,15 @@ const City = (props) => {
         <h1>Ruthie Recommends</h1>
       </div>
       <div className="intro">
-        Ruthie recommends her favorite dog friendly spots in every city she has
+        Ruth recommends her favorite dog friendly spots in each city she has
         visited across the globe! Below you will find links to some of her
-        favorite dog friendly places to Stay, get a Treat, or take a Walk in
-        each city.
+        favorite dog friendly places to Stay, get a Treat, or take a Walk in the
+        city. Before you scroll on, feel free to send Ruth a travel
+        recommendation.
+      </div>
+      <br />
+      <div>
+        <Contact />
       </div>
       <section className="map post-map">
         {posts.map((posts) => (
