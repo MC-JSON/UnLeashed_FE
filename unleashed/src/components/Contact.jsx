@@ -26,7 +26,9 @@ const Contact = () => {
         console.log(error.text);
       }
     );
-    e.target.reset();
+    set_sender_name('');
+    set_sender_email('');
+    setMessage('')
   };
   return (
     <div>
