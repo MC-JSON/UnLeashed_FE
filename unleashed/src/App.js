@@ -5,6 +5,17 @@ import Home from './pages/Home'
 import { siteLogo } from './Images'
 import City from './pages/City'
 import Admin from './pages/Admin'
+import { useState, useEffect } from 'react'
+
+const [user, setUser] = useState(null)
+
+useEffect(() => {
+  const fetchUser = async () => {
+    const user = await verifyUser()
+    user ? setUser(user) : setUser(null)
+  }
+  fetchUser()
+}, [])
 
 const App = () => {
   return (
@@ -14,7 +25,10 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home siteLogo={siteLogo} />} />
           <Route path="/city" element={<City siteLogo={siteLogo} />} />
-          <Route path="/ruroutetru" element={<Admin siteLogo={siteLogo} />} />
+          <Route
+            path="/admin"
+            element={<Admin siteLogo={siteLogo} user={user} />}
+          />
           <Route path="*" element={<Home siteLogo={siteLogo} />} />
         </Routes>
       </main>
