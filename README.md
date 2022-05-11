@@ -16,7 +16,7 @@
 
 Welcome to UnLeashed!
 
-Here you will find resources for traveling with your dog across the world. Whether you need information on requirements for bringing your dog into a new country or how to fly with them on your most traveled airline, UnLeashed will lead you there. You will also find UnLeashed's lead dog Ruthie recommending her favorite areas in cities she has traveled to.
+Here you will find resources for traveling with your dog across the world. Whether you need information on requirements for bringing your dog into a new country or how to fly with them on your most traveled airline, UnLeashed will lead you there. You will also find UnLeashed's dog Ruthie recommending her favorite areas in cities she has traveled to.
 
 The details are hosted on a scaled-back, user-friendly, full-stack MERN application.
 
@@ -28,11 +28,12 @@ The details are hosted on a scaled-back, user-friendly, full-stack MERN applicat
 
 ## Technologies
 
-1.  React
+1.  ReactJS
 2.  MongoDB
 3.  Mongoose
 4.  Express
-5.  Node
+5.  Node.js
+6.  EmailJS
 
 ---
 
@@ -40,18 +41,18 @@ The details are hosted on a scaled-back, user-friendly, full-stack MERN applicat
 
 ![HomePage]()
 
-![Profile]()
+![Ruthie]()
 
 ---
 
 ## **MVP**
 
-- [] Get
-- [] Post
-- [] Update
-- [] Delete
-- [] 3 Models
-- [] React
+- [x] Get
+- [x] Post
+- [x] Update
+- [x] Delete
+- [x] 3 Models
+- [x] React
 - [] Style
 - [] Deploy
 

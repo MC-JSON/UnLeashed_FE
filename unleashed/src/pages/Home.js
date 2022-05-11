@@ -28,8 +28,6 @@ const Home = (props) => {
     getAirlines()
   }, [])
 
-  //intro breakdown between logo and countries
-  //country/airline search function?
   return (
     <div>
       <div>
@@ -50,12 +48,13 @@ const Home = (props) => {
         <a href="http://localhost:3000/city">Ruthie Recommends</a>
       </div>
       <br />
-      <div class="column-container">
+      <div className="column-container">
         <div className="map countries-map">
           <section>
             {countries.map((countries) => (
               <div>
                 <CountryLayout
+                  key={countries.id}
                   name={countries.name}
                   flag_img={countries.flag_img}
                   requirements={countries.requirements}
@@ -70,6 +69,7 @@ const Home = (props) => {
             {airlines.map((airlines) => (
               <div>
                 <AirLayout
+                  key={airlines.id}
                   name={airlines.name}
                   logo={airlines.logo}
                   reservations={airlines.reservations}

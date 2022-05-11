@@ -1,5 +1,3 @@
-///recommendation form that emails to admin
-
 //admin link access
 
 //mapbox?
