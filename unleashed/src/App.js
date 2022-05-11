@@ -5,6 +5,8 @@ import Home from './pages/Home'
 import { siteLogo } from './Images'
 import City from './pages/City'
 import Admin from './pages/Admin'
+import SignIn from './pages/SignIn'
+import SignUp from './pages/SignUp'
 import { useState, useEffect } from 'react'
 
 const [user, setUser] = useState(null)
@@ -27,7 +29,21 @@ const App = () => {
           <Route path="/city" element={<City siteLogo={siteLogo} />} />
           <Route
             path="/admin"
-            element={<Admin siteLogo={siteLogo} user={user} />}
+            element={
+              user ? (
+                <Admin siteLogo={siteLogo} user={user} />
+              ) : (
+                <Redirect to="/sign-in" />
+              )
+            }
+          />
+          <Route
+            path="signup"
+            element={<SignUp siteLogo={siteLogo} setUser={setUser} />}
+          />
+          <Route
+            path="signin"
+            element={<SignIn siteLogo={siteLogo} setUser={setUser} />}
           />
           <Route path="*" element={<Home siteLogo={siteLogo} />} />
         </Routes>

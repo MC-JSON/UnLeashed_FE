@@ -1,12 +1,15 @@
 import { useState } from 'react'
-import { SignInUser } from '../services/Auth'
-import { useNavigate } from 'react-router-dom'
+import { signIn } from '../services/Auth'
+import { useHistory } from 'react-router-dom'
 
-const SignIn = ({ setUser, toggleAuthenticated }) => {
-  let navigate = useNavigate()
+const SignIn = (props) => {
+  let history = useHistory()
+
   const [formValues, setFormValues] = useState({
-    adminEmail: '',
-    adminPassword: ''
+    email: '',
+    password: '',
+    isError: false,
+    errorMsg: ''
   })
 
   const handleChange = (e) => {
@@ -15,23 +18,47 @@ const SignIn = ({ setUser, toggleAuthenticated }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const payload = await SignInUser(formValues)
-    setFormValues({ adminEmail: '', adminPassword: '' })
-    setUser(payload)
-    toggleAuthenticated(true)
-    navigate('/admin')
+    const { setUser } = props
+    try {
+      const user = await signIn(form)
+      setUser(user)
+      history.push('/admin')
+    } catch (error) {
+      setFormValues({
+        isError: true,
+        errorMsg: 'Invalid Login',
+        email: '',
+        password: ''
+      })
+    }
   }
+
+  const renderError = () => {
+    const toggleForm = form.isError ? 'danger' : ''
+    if (form.isError) {
+      return (
+        <button type="submit" className={toggleForm}>
+          {form.errorMsg}
+        </button>
+      )
+    } else {
+      return <button type="submit">Sign In</button>
+    }
+  }
+
+  const { email, password } = form
 
   return (
     <div>
       <form onSubmit={handleSubmit} className="login-form">
+        <h3>Sign In</h3>
         <div className="email-input">
           <input
             onChange={handleChange}
-            name="adminEmail"
-            type="email"
+            name="email"
+            type="text"
             placeholder="Email Address"
-            value={formValues.adminEmail}
+            value={email}
             required
           />
         </div>
@@ -39,19 +66,13 @@ const SignIn = ({ setUser, toggleAuthenticated }) => {
           <input
             onChange={handleChange}
             type="password"
-            name="adminPassword"
+            name="password"
             placeholder="Password"
-            value={formValues.adminPassword}
+            value={password}
             required
           />
         </div>
-        <div className="sign-in-button">
-          <button
-            disabled={!formValues.adminEmail || !formValues.adminPassword}
-          >
-            Sign In
-          </button>
-        </div>
+        {renderError()}
       </form>
     </div>
   )
