@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { signUp } from '../services/Auth'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const SignUp = (props) => {
-  let history = useHistory()
+  let navigate = useNavigate()
 
   const [formValues, setFormValues] = useState({
     name: '',
@@ -22,9 +22,9 @@ const SignUp = (props) => {
     e.preventDefault()
     const { setUser } = props
     try {
-      const user = await signUp(form)
+      const user = await signUp(formValues)
       setUser(user)
-      history.push('/admin')
+      navigate('/admin')
     } catch (error) {
       setFormValues({
         name: '',
@@ -38,11 +38,11 @@ const SignUp = (props) => {
   }
 
   const renderError = () => {
-    const toggleForm = form.isError ? 'danger' : ''
-    if (form.isError) {
+    const toggleForm = formValues.isError ? 'danger' : ''
+    if (formValues.isError) {
       return (
         <button type="submit" className={toggleForm}>
-          {form.errorMsg}
+          {formValues.errorMsg}
         </button>
       )
     } else {
@@ -50,7 +50,7 @@ const SignUp = (props) => {
     }
   }
 
-  const { name, email, password, passwordConfirmation } = form
+  const { name, email, password, passwordConfirmation } = formValues
 
   return (
     <div>

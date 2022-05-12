@@ -7,19 +7,20 @@ import City from './pages/City'
 import Admin from './pages/Admin'
 import SignIn from './pages/SignIn'
 import SignUp from './pages/SignUp'
+import { verifyUser } from './services/Auth'
 import { useState, useEffect } from 'react'
 
-const [user, setUser] = useState(null)
-
-useEffect(() => {
-  const fetchUser = async () => {
-    const user = await verifyUser()
-    user ? setUser(user) : setUser(null)
-  }
-  fetchUser()
-}, [])
-
 const App = () => {
+  const [user, setUser] = useState(null)
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const user = await verifyUser()
+      user ? setUser(user) : setUser(null)
+    }
+    fetchUser()
+  }, [])
+
   return (
     <div>
       <Nav />
@@ -33,7 +34,7 @@ const App = () => {
               user ? (
                 <Admin siteLogo={siteLogo} user={user} />
               ) : (
-                <Redirect to="/sign-in" />
+                <SignIn siteLogo={siteLogo} />
               )
             }
           />
