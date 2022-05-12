@@ -1,29 +1,33 @@
-import Client from './api'
+import api from './api'
+import jwtDecode from 'jwt-decode'
 
-export const SignInUser = async (data) => {
+export const signUp = async (credentials) => {
   try {
-    const res = await Client.post('/auth/login', data)
+    const res = await api.post('/signup', credentials)
     localStorage.setItem('token', res.data.token)
-    return res.data.owner
+    const user = jwtDecode(res.data.token)
+    return user
   } catch (error) {
     throw error
   }
 }
 
-export const RegisterUser = async (data) => {
+export const signIn = async (credentials) => {
   try {
-    const res = await Client.post('/auth/register', data)
-    return res.data
+    const res = await api.post('/signin', credentials)
+    localStorage.setItem('token', res.data.token)
+    const user = jwtDecode(res.data.token)
+    return user
   } catch (error) {
     throw error
   }
 }
 
-export const CheckSession = async () => {
-  try {
-    const res = await Client.get('/auth/session')
+export const verifyUser = async () => {
+  const token = localStorage.getItem('token')
+  if (token) {
+    const res = await api.get('/verify')
     return res.data
-  } catch (error) {
-    throw error
   }
+  return false
 }
