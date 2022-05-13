@@ -9,7 +9,7 @@ const SignUp = (props) => {
     name: '',
     email: '',
     password: '',
-    passwordConfirmation: '',
+    // passwordConfirmation: '',
     isError: false,
     errorMsg: ''
   })
@@ -24,15 +24,15 @@ const SignUp = (props) => {
     try {
       const user = await signUp(formValues)
       setUser(user)
-      navigate('/admin')
+      navigate('/')
     } catch (error) {
       setFormValues({
         name: '',
         isError: true,
         errorMsg: 'Invalid Sign Up Details',
         email: '',
-        password: '',
-        passwordConfirmation: ''
+        password: ''
+        // passwordConfirmation: ''
       })
     }
   }
@@ -50,7 +50,7 @@ const SignUp = (props) => {
     }
   }
 
-  const { name, email, password, passwordConfirmation } = formValues
+  const { name, email, password } = formValues
 
   return (
     <div>
@@ -85,14 +85,14 @@ const SignUp = (props) => {
             value={password}
             required
           />
-          <input
+          {/* <input
             onChange={handleChange}
             type="passwordConfirmation"
             name="password"
             placeholder="Confirm Password"
             value={passwordConfirmation}
             required
-          />
+          /> */}
         </div>
         {renderError()}
       </form>

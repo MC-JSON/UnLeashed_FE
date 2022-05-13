@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { signIn } from '../services/Auth'
 import { useNavigate } from 'react-router-dom'
+import Logo from '../components/Logo'
 
 const SignIn = (props) => {
   let navigate = useNavigate()
@@ -37,12 +38,18 @@ const SignIn = (props) => {
     const toggleForm = formValues.isError ? 'danger' : ''
     if (formValues.isError) {
       return (
-        <button type="submit" className={toggleForm}>
-          {formValues.errorMsg}
-        </button>
+        <div className="signs">
+          <button type="submit" className={toggleForm}>
+            {formValues.errorMsg}
+          </button>
+        </div>
       )
     } else {
-      return <button type="submit">Sign In</button>
+      return (
+        <div className="signs">
+          <button type="submit">Sign In</button>
+        </div>
+      )
     }
   }
 
@@ -50,6 +57,9 @@ const SignIn = (props) => {
 
   return (
     <div>
+      <div>
+        <Logo siteLogo={props.siteLogo} />
+      </div>
       <form onSubmit={handleSubmit} className="login-form">
         <h3>Sign In</h3>
         <div className="email-input">
@@ -72,6 +82,7 @@ const SignIn = (props) => {
             required
           />
         </div>
+        <br />
         {renderError()}
       </form>
     </div>

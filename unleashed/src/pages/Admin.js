@@ -18,7 +18,7 @@ const Admin = (props) => {
   }, [])
 
   return (
-    <div>
+    <div user={props.user}>
       <div>
         <Logo siteLogo={props.siteLogo} />
       </div>

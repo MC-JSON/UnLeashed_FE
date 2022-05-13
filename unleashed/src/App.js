@@ -21,6 +21,7 @@ const App = () => {
     fetchUser()
   }, [])
 
+  //Sign-up was only utilized to set admin logins
   return (
     <div>
       <Nav />
@@ -34,14 +35,14 @@ const App = () => {
               user ? (
                 <Admin siteLogo={siteLogo} user={user} />
               ) : (
-                <SignIn siteLogo={siteLogo} />
+                <SignIn siteLogo={siteLogo} setUser={setUser} />
               )
             }
           />
-          <Route
+          {/* <Route
             path="signup"
             element={<SignUp siteLogo={siteLogo} setUser={setUser} />}
-          />
+          /> */}
           <Route
             path="signin"
             element={<SignIn siteLogo={siteLogo} setUser={setUser} />}
