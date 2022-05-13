@@ -57,6 +57,7 @@ const SignIn = (props) => {
 
   return (
     <div>
+      <br />
       <div>
         <Logo siteLogo={props.siteLogo} />
       </div>

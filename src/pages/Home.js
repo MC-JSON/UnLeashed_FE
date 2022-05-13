@@ -33,7 +33,8 @@ const Home = (props) => {
   }, [])
 
   return (
-    <div>
+    <div className="home">
+      <br />
       <div>
         <Logo siteLogo={props.siteLogo} />
       </div>
@@ -55,7 +56,7 @@ const Home = (props) => {
       </div>
       <br />
       <div className="column-container">
-        <div className="map countries-map">
+        <div className="countries-map">
           <section>
             {countries.map((countries) => (
               <div>
@@ -70,7 +71,7 @@ const Home = (props) => {
             ))}
           </section>
         </div>
-        <div className="map airlines-map">
+        <div className="airlines-map">
           <section>
             {airlines.map((airlines) => (
               <div>

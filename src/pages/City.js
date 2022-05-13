@@ -20,7 +20,8 @@ const City = (props) => {
   }, [])
 
   return (
-    <div>
+    <div className="city">
+      <br />
       <div>
         <Logo siteLogo={props.siteLogo} />
         <h1>Ruthie Recommends</h1>
