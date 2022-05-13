@@ -71,3 +71,14 @@ header nav a {
   margin: 10px;
   overflow-y: auto
 }
+
+@media all and (max-width: 500px){
+
+  .img2 {
+    height: auto
+  }
+
+  img {
+    height: 20%
+  }
+}
