@@ -36,7 +36,7 @@ const City = (props) => {
       <div>
         <Contact />
       </div>
-      <section className="map post-map">
+      <section className="post-map">
         {posts.map((posts) => (
           <div>
             <PostLayout

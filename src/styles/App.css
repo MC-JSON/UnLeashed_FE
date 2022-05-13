@@ -29,7 +29,13 @@ img {
 header nav a {
   margin: 0 1em;
   font-size: 20px;
-  color: black;
+  color: black
+}
+
+.jump {
+ color: black;
+ text-decoration: none;
+ font-family: fantasy;
 }
 
 .logo-content, h1{
@@ -66,10 +72,17 @@ header nav a {
   text-align: center;
 }
 
-.map{
+.post-map{
   height: 500px;
   margin: 10px;
   overflow-y: auto
+}
+
+.map{
+  height: 500px;
+  width: 600px;
+  margin-left: 65px;
+  overflow-y: auto;
 }
 
 @media all and (max-width: 500px){
@@ -80,5 +93,18 @@ header nav a {
 
   img {
     height: auto
+  }
+
+  .navbar {
+    margin: 0px;
+    padding: 10px;
+    font-family: 'Marigold';
+    font-size: 10px;
+    color: black;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4vh;
   }
 }
