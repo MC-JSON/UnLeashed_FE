@@ -11,12 +11,16 @@ const Home = (props) => {
 
   //retrieve and set Countries
   const getCountries = async () => {
-    const res = await axios.get('http://localhost:3001/country')
+    const res = await axios.get(
+      'https://whispering-dawn-47473.herokuapp.com/country'
+    )
     setCountries(res.data.country)
   }
 
   const getAirlines = async () => {
-    const res = await axios.get('http://localhost:3001/airline')
+    const res = await axios.get(
+      'https://whispering-dawn-47473.herokuapp.com/airline'
+    )
     setAirlines(res.data.airline)
   }
 
@@ -45,7 +49,7 @@ const Home = (props) => {
         If you find city recommendations of interest. Please follow Ruthie for
         her travel recommendations. Please use the link below or at the
         navigation bar.
-        <a href="http://localhost:3000/city">Ruthie Recommends</a>
+        <a href="https://ruunleashed.herokuapp.com/city">Ruthie Recommends</a>
       </div>
       <br />
       <div className="column-container">

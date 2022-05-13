@@ -9,7 +9,9 @@ const Admin = (props) => {
 
   //retrieve and set Countries
   const getPosts = async () => {
-    const res = await axios.get('http://localhost:3001/city')
+    const res = await axios.get(
+      'https://whispering-dawn-47473.herokuapp.com/city'
+    )
     setPosts(res.data.city)
   }
 

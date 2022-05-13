@@ -24,7 +24,7 @@ const SignUp = (props) => {
     try {
       const user = await signUp(formValues)
       setUser(user)
-      navigate('/')
+      navigate('https://ruunleashed.herokuapp.com/signin')
     } catch (error) {
       setFormValues({
         name: '',

@@ -28,7 +28,7 @@ const CreatePost = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     await axios.post(
-      'http://localhost:3001/create/city',
+      'https://whispering-dawn-47473.herokuapp.com/create/city',
       formValue
     )
   }

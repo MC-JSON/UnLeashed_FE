@@ -7,7 +7,7 @@ const getToken = () => {
 }
 
 const api = axios.create({
-  baseURL: 'http://localhost:3001'
+  baseURL: 'https://whispering-dawn-47473.herokuapp.com/'
 })
 
 api.interceptors.request.use(

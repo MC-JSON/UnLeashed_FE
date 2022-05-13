@@ -31,13 +31,13 @@ const UpdatePost = (props) => {
   // handles delete submit and navigates back
   const handleSubmit2 = async (e) => {
     e.preventDefault()
-    await axios.delete(`http://localhost:3001/delete/city/${props.id}`)
+    await axios.delete(`https://whispering-dawn-47473.herokuapp.com/delete/city/${props.id}`)
     navigate('/city')
   }
 
   const handleSubmit3 = async (e) => {
     e.preventDefault()
-    await axios.put(`http://localhost:3001/update/city/${props.id}`, formValue)
+    await axios.put(`https://whispering-dawn-47473.herokuapp.com/update/city/${props.id}`, formValue)
     navigate('/city')
   }
 
