@@ -23,7 +23,7 @@ const SignIn = (props) => {
     try {
       const user = await signIn(formValues)
       setUser(user)
-      navigate('https://ruunleashed.herokuapp.com/admin')
+      navigate('/admin')
     } catch (error) {
       setFormValues({
         isError: true,
