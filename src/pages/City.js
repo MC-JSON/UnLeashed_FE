@@ -27,7 +27,7 @@ const City = (props) => {
         <h1>Ruthie Recommends</h1>
       </div>
       <div className="intro">
-        Ruthies favorite dog friendly spots in each city she has visited across
+        Ruthie's favorite dog friendly spots in each city she has visited across
         the globe! Below you will find links to some of her favorite dog
         friendly places to Stay, get a Treat, or take a Walk in each city.
         Before you scroll on, feel free to send Ruthie a travel recommendation.
@@ -36,6 +36,7 @@ const City = (props) => {
       <div>
         <Contact />
       </div>
+      <br />
       <section className="post-map">
         {posts.map((posts) => (
           <div>

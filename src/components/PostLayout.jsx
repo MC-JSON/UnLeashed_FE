@@ -9,17 +9,11 @@ const PostLayout = (props) => {
         <h3>{props.date}</h3>
         <p>{props.description}</p>
         <div>
-          STAY: 
+        <h4>STAY: </h4>
         <a href={props.stayLink} className="jump">{props.stay}</a>
-        </div>
-        <br />
-        <div>
-          TREAT: 
+        <h4>TREAT: </h4> 
         <a href={props.treatLink} className="jump">{props.treat}</a>
-        </div>
-        <br />
-        <div>
-          WALK:
+        <h4>WALK: </h4>
         <a href={props.walkLink} className="jump">{props.walk}</a>
       </div>
       </div>

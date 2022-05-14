@@ -31,7 +31,7 @@ const Contact = () => {
     setMessage('')
   };
   return (
-    <div>
+    <div className="contact-form">
       <h4>Do you have any travel recommendations for Ruth?</h4>
       <form onSubmit={handleSubmit}>
         <input type="text" name="sender_name" value={sender_name} onChange={handleName} required placeholder="Your Name" />
