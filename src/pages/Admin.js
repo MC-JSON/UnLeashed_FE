@@ -19,6 +19,8 @@ const Admin = (props) => {
     getPosts()
   }, [])
 
+  console.log(props.user)
+
   return (
     <div user={props.user}>
       <br />
@@ -27,7 +29,7 @@ const Admin = (props) => {
       </div>
       <div>
         <CreatePost />
-        <h2>Update Post</h2>
+        <h1>Update Post</h1>
         {posts.map((posts) => (
           <UpdatePost
             id={posts._id}

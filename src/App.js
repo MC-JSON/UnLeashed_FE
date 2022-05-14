@@ -6,7 +6,7 @@ import { siteLogo } from './Images'
 import City from './pages/City'
 import Admin from './pages/Admin'
 import SignIn from './pages/SignIn'
-import SignUp from './pages/SignUp'
+// import SignUp from './pages/SignUp'
 import { verifyUser } from './services/Auth'
 import { useState, useEffect } from 'react'
 
@@ -27,15 +27,18 @@ const App = () => {
       <Nav />
       <main>
         <Routes>
-          <Route path="/" element={<Home siteLogo={siteLogo} />} />
-          <Route path="/city" element={<City siteLogo={siteLogo} />} />
+          <Route path="/" element={<Home siteLogo={siteLogo} user={user} />} />
+          <Route
+            path="/city"
+            element={<City siteLogo={siteLogo} user={user} />}
+          />
           <Route
             path="/admin"
             element={
               user ? (
                 <Admin siteLogo={siteLogo} user={user} />
               ) : (
-                <SignIn siteLogo={siteLogo} setUser={setUser} />
+                <SignIn siteLogo={siteLogo} setUser={setUser} user={user} />
               )
             }
           />
@@ -45,9 +48,11 @@ const App = () => {
           /> */}
           <Route
             path="signin"
-            element={<SignIn siteLogo={siteLogo} setUser={setUser} />}
+            element={
+              <SignIn siteLogo={siteLogo} setUser={setUser} user={user} />
+            }
           />
-          <Route path="*" element={<Home siteLogo={siteLogo} />} />
+          <Route path="*" element={<Home siteLogo={siteLogo} user={user} />} />
         </Routes>
       </main>
     </div>
