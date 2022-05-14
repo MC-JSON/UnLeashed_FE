@@ -27,11 +27,10 @@ const City = (props) => {
         <h1>Ruthie Recommends</h1>
       </div>
       <div className="intro">
-        Ruth recommends her favorite dog friendly spots in each city she has
-        visited across the globe! Below you will find links to some of her
-        favorite dog friendly places to Stay, get a Treat, or take a Walk in the
-        city. Before you scroll on, feel free to send Ruth a travel
-        recommendation.
+        Ruthies favorite dog friendly spots in each city she has visited across
+        the globe! Below you will find links to some of her favorite dog
+        friendly places to Stay, get a Treat, or take a Walk in each city.
+        Before you scroll on, feel free to send Ruthie a travel recommendation.
       </div>
       <br />
       <div>

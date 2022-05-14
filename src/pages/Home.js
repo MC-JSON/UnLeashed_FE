@@ -40,10 +40,10 @@ const Home = (props) => {
       </div>
       <div className="intro">
         Welcome to UnLeashed, a central hub for dog international travel
-        information. You will see below listings for both country and airline
-        canine requirements. A short introduction of requirements is provided,
-        please utilize the links for a more intensive breakdown of requirements
-        from the country/airline websites.
+        information. You will see below canine requirement listings for both
+        country and airline destinations. A short introduction of requirements
+        is provided, please utilize the links for a more intensive breakdown of
+        requirements from the country/airline websites.
       </div>
       <br />
       <div className="post-link">
