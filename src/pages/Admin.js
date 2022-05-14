@@ -21,6 +21,7 @@ const Admin = (props) => {
 
   return (
     <div user={props.user}>
+      <br />
       <div>
         <Logo siteLogo={props.siteLogo} />
       </div>

@@ -123,4 +123,24 @@ header nav a {
     align-items: center;
     height: 4vh;
   }
+
+  .airlines-map{
+    height: 500px;
+    width: 600px;
+    margin-left: 1px;
+    border-radius: 25px;
+    transition:  1s;
+    overflow-y: auto;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .countries-map{
+    height: 500px;
+    width: 600px;
+    padding-top: 5px;
+    margin-left: 1px;
+    border-radius: 25px;
+    overflow-y: auto;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+  }
 }
