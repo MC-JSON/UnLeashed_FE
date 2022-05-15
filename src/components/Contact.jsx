@@ -32,12 +32,12 @@ const Contact = () => {
   };
   return (
     <div className="contact-form">
-      <h4>Do you have any travel recommendations for Ruth?</h4>
+      <h4 className="ruth2">Do you have any travel recommendations for Ruth?</h4>
       <form onSubmit={handleSubmit}>
         <input type="text" name="sender_name" value={sender_name} onChange={handleName} required placeholder="Your Name" />
         <input type="email" name="sender_email" value={sender_email} onChange={handleEmail} required placeholder="Your Email" />
         <input name="message" value={message} onChange={handleMessage} required placeholder="Travel Recommendations" />
-        <button type="submit">Send</button>
+        <button type="submit" className="contact-button">Send</button>
       </form>
     </div>
   );

@@ -24,7 +24,7 @@ const City = (props) => {
       <br />
       <div>
         <Logo siteLogo={props.siteLogo} />
-        <h1>Ruthie Recommends</h1>
+        <h1 className="ruth">Ruthie Recommends</h1>
       </div>
       <div className="intro">
         Ruthie's favorite dog friendly spots in each city she has visited across

@@ -35,9 +35,9 @@ The details are hosted on a scaled-back, user-friendly, full-stack MERN applicat
 
 ## Screenshots
 
-![HomePage]()
+![HomePage](https://res.cloudinary.com/dntpwckqi/image/upload/v1652634610/Homepage_fbazay.png)
 
-![Ruthie]()
+![Ruthie](https://res.cloudinary.com/dntpwckqi/image/upload/v1652634621/Ruthie_ysmrwq.png)
 
 ---
 

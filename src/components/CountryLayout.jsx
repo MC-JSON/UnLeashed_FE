@@ -7,7 +7,7 @@ const CountryLayout = (props) => {
       </div>
       <div className="info-wrapper">
         <h2>{props.name}</h2>
-        <p>{props.requirements}</p>
+        <p className="rez">{props.requirements}</p>
       </div>
       <br />
     </div>

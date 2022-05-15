@@ -7,13 +7,24 @@ img {
   height: auto
 }
 
-img:hover {
+.img2:hover, .img3:hover {
   max-width: 26%;
   height: auto
 }
 
 .img2{
   height: 95px
+}
+
+.img3{
+  max-width: 25%;
+  height: auto
+}
+
+.img4{
+  max-width: 45%;
+  max-height: auto;
+  border-radius: 50px
 }
 
 .navbar {
@@ -66,7 +77,13 @@ button:hover {
   display: flex;
   flex-flow: column;
   text-align: center;
-  padding: 0 50px 0 50px
+  margin: 0 100px;
+  padding: 0 50px 0 50px;
+  line-height: 25px
+}
+
+.rez{
+  line-height: 25px
 }
 
 .login-form, .contact-form{
@@ -102,7 +119,8 @@ button:hover {
 .airlines-map{
   height: 500px;
   width: 600px;
-  margin-left: 65px;
+  margin: 0 auto;
+  padding: 0 5px 0 5px;
   border-radius: 25px;
   transition:  1s;
   overflow-y: auto;
@@ -112,16 +130,27 @@ button:hover {
 .countries-map{
   height: 500px;
   width: 600px;
-  padding-top: 5px;
-  margin-left: 65px;
+  padding: 5px 5px 0 5px;
+  margin: 0 auto;
   border-radius: 25px;
   overflow-y: auto;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
 }
 
 h4{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   margin-top: 10px;
   margin-bottom: 10px
+}
+
+.ruth{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 40px;
+}
+
+.ruth2{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px
 }
 
 @media all and (max-width: 500px){
