@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react'
 const Admin = (props) => {
   const [posts, setPosts] = useState([])
 
-  //retrieve and set Countries
+  //retrieve and set Posts to edit/update
   const getPosts = async () => {
     const res = await axios.get(
       'https://whispering-dawn-47473.herokuapp.com/city'

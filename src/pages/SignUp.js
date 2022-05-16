@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { signUp } from '../services/Auth'
 import { useNavigate } from 'react-router-dom'
 
+//Admin signup that was used to create Admin
 const SignUp = (props) => {
   let navigate = useNavigate()
 
@@ -9,7 +10,6 @@ const SignUp = (props) => {
     name: '',
     email: '',
     password: '',
-    // passwordConfirmation: '',
     isError: false,
     errorMsg: ''
   })
@@ -32,7 +32,6 @@ const SignUp = (props) => {
         errorMsg: 'Invalid Sign Up Details',
         email: '',
         password: ''
-        // passwordConfirmation: ''
       })
     }
   }

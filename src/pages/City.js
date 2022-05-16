@@ -7,7 +7,7 @@ import Contact from '../components/Contact'
 const City = (props) => {
   const [posts, setPosts] = useState([])
 
-  //retrieve and set Countries
+  //retrieve and set Posts
   const getPosts = async () => {
     const res = await axios.get(
       'https://whispering-dawn-47473.herokuapp.com/city'

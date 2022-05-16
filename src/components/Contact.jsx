@@ -1,6 +1,7 @@
 import emailjs from "emailjs-com";
 import {useState} from 'react'
 
+//Contact component for email recommendations using EmailJS
 const Contact = () => {
   const [sender_name, set_sender_name] = useState();
   const [sender_email, set_sender_email] = useState();

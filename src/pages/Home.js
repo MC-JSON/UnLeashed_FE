@@ -17,6 +17,7 @@ const Home = (props) => {
     setCountries(res.data.country)
   }
 
+  //retrieve and set Airlines
   const getAirlines = async () => {
     const res = await axios.get(
       'https://whispering-dawn-47473.herokuapp.com/airline'

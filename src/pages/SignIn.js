@@ -3,6 +3,7 @@ import { signIn } from '../services/Auth'
 import { useNavigate } from 'react-router-dom'
 import Logo from '../components/Logo'
 
+//Admin signin page
 const SignIn = (props) => {
   let navigate = useNavigate()
 
