@@ -159,8 +159,15 @@ h4{
     height: auto
   }
 
-  img {
-    height: auto
+  .img4{
+    max-width: 75%;
+    max-height: auto;
+    border-radius: 20px
+  }
+
+  .ruth{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
   }
 
   .navbar {
@@ -176,6 +183,15 @@ h4{
     height: 4vh;
   }
 
+  .intro{
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    margin: 0;
+    padding: 0 50px 0 50px;
+    line-height: 25px
+  }
+  
   .airlines-map{
     height: 500px;
     width: 600px;
