@@ -51,7 +51,7 @@ const Home = (props) => {
         If you find city recommendations of interest. Please follow Ruthie for
         her travel recommendations. Please use the link below or at the
         navigation bar.
-        <a href="https://ruunleashed.netlify.app/city" className="jump jumpr">
+        <a href="https://ruunleashed.herokuapp.com/city" className="jump jumpr">
           Ruthie Recommends
         </a>
       </div>
